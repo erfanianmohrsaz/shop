@@ -12,6 +12,7 @@ CREATE TABLE IF NOT EXISTS users (
 	firstname 		TEXT ,
 	online 			INTEGER 	NOT NULL  DEFAULT 1,
 	status			INTEGER,
+	pfp			TEXT,
 	CHECK( online < 2 AND
 	 length(phone) == 11 ));
 CREATE TABLE IF NOT EXISTS items (
