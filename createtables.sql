@@ -6,7 +6,6 @@ CREATE TABLE IF NOT EXISTS users (
 	email 			TEXT	 	NOT NULL 	 UNIQUE,
 	phone 			TEXT 		NOT NULL  	 UNIQUE,
 	passhash 		TEXT,
-	passsalt 		TEXT ,
 	creation_date   	INTEGER,
 	lastname	    	TEXT ,
 	firstname 		TEXT ,
