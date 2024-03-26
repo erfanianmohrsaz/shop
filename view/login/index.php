@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-   <a href="login.php" target="_blank" rel="noopener noreferrer"><input type="button"  value="Login"></a>
+   <a href="login.php" target="_blank" rel="noopener noreferrer"><input type="button"  value="Login"></a><br>
    <a href="register.php" target="_blank" rel="noopener noreferrer"><input type="button"  value="Sing in"></a>
 </body>
 </html>
