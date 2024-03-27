@@ -43,13 +43,3 @@ if ($_SERVER['REQUEST_METHOD']==='POST')
 
 
 ?>
-<html>
-<form method=post>
-<input name=user type="text">
-<br>
-<input name=pass type="password">
-<br>
-<input type="submit">
-<br>
-</form>
-</html>
