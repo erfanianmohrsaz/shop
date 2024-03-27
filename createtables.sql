@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS users (
 	username 		TEXT 		NOT NULL	 UNIQUE,
 	email 			TEXT	 	NOT NULL 	 UNIQUE,
 	phone 			TEXT 		NOT NULL  	 UNIQUE,
-	passhash 		TEXT,
+	passhash 		TEXT		NOT NULL,
 	creation_date   	INTEGER,
 	lastname	    	TEXT ,
 	firstname 		TEXT ,
