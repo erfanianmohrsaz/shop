@@ -1,7 +1,7 @@
 <?php
-//function for creat Salt and use in another file 
-   function selectsalt( $length = 10) {
+//creat random string
+$length = 10;
+$salt = bin2hex(random_bytes($length));
 
-    return random_bytes($length);
-   }
-  // echo Salt();
+//creat hash password and add salt
+$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
