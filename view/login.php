@@ -12,18 +12,17 @@
 <div class="container">
   <div class="login-box">
     <h2>ورود</h2>
-    <form action="#">
+    <form method=post>
       <div class="input-box">
-        <input type="text" required>
+      <input name=user type="text" required value="<?=htmlentities($logins["user"]??null)?>">
         <label>نام کاربری</label>
       </div>
+      <div> <label class="danger"><?=$error["user"]??null?></label> </div>
       <div class="input-box">
-        <input type="password" required>
+      <input name=pass type="password" required value="<?=htmlentities($logins["pass"]??null)?>">
         <label>رمز</label>
       </div>
-    <div>
-      <label class="danger">پسورد درست نیست</label>
-    </div>
+    <div> <label class="danger"><?=$error["pass"]??null?></label> </div>
       <button type="submit" class="btn">ورود</button>
       <div class="signup-link">
         <a href="sign-up.html">ساخت حساب</a>

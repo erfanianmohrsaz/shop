@@ -27,7 +27,7 @@ function validate_logins(PDO $dbh,$logins)
 	if (!ctype_alnum($logins["user"]))
 	{ $error["user"] = "Input alphanumeric charterers"; }
 	if (!ctype_print( $logins["pass"]) )
-	{ $error["user"] = "Input printable charterers"; }
+	{ $error["pass"] = "Input printable charterers"; }
 	if ($error)
 	{ return $error; }
 	return auth_user($dbh,$logins["user"],$logins["pass"]);
@@ -36,10 +36,6 @@ if ($_SERVER['REQUEST_METHOD']==='POST')
 {
 	$logins = login_array();
 	echo count($logins);
-	print_r (validate_logins($dbh,$logins));
-	
+	$error=validate_logins($dbh,$logins);
 }
 
-
-
-?>
