@@ -1,3 +1,4 @@
+@import "lib/var.css";
 
 * {
   margin: 0;
@@ -12,11 +13,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #1f293a;
+  background: var(--back-col);
   min-height: 100vh;
 }
 
-.container {
+.container {  
   position: relative;
   width: 256px;
   height: 256px;
@@ -32,17 +33,24 @@ body {
 
 .login-box form {
   width: 100%;
-  padding: 0 50px;
+  padding: 0px 50px;
 }
+.div1, .div2{
+ 
+  display: inline-block;
+  width: 49%;
+}
+
+
 
 h2 {
   font-size: 2em;
-  color: #0ef;
+  color: var(--h2-col);
   text-align: center;
 }
 .input-box {
   position: relative;
-  margin: 25px 0;
+  margin: 15px 0;
   
 }
 
@@ -50,18 +58,19 @@ h2 {
   width: 100%;
   height: 50px;
   background: transparent;
-  border: 2px solid #2c4766;
+  border: 2px solid var(--border-col1);
   outline: none;
   border-radius: 40px;
   font-size: 1em;
   color: #fff;
   padding: 0 20px;
-  transition: 0.5s;
+  transition: 2s;
+  
 }
 
 .input-box input:focus,
 .input-box input:valid {
-  border-color: #0ef;
+  border-color: var(--border-col2);
 }
 
 .input-box label {
@@ -84,7 +93,11 @@ h2 {
   color: #0ef;
 }
 
-
+.danger{
+  color: var(--danger-col);
+  font-size: 0.8em;
+  margin-right: 20px;
+}
 
 .btn {
   width: 100%;
@@ -95,8 +108,9 @@ h2 {
   outline: none;
   cursor: pointer;
   font-size: 1em;
-  color: #1f293a;
+  color: var();
   font-weight: 600;
+  margin: 15px 0;
 }
 
 .signup-link {
