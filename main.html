@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row {
+            /* margin-right: 15vw;  */
+            display: flex;
+            font-size: 1.5vw;
+
+        }
+
+        /* -----------------------------  bar  -----------------------------*/
+
+        .commodity {
+            display: flex;
+            font-size: 1.5vw;
+
+        }
+
+        /* -----------------------------  bar  -----------------------------*/
+
+        /* -----------------------------  bar  -----------------------------*/
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #a0a0a0;
+            width: 100%;
+        }
+
+        /* -----------------------------  bar  -----------------------------*/
+        li {
+            float: right;
+        }
+
+        /* -----------------------------  bar  -----------------------------*/
+        li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+
+        li a:hover {
+            background-color: #bebebe;
+        }
+
+
+
+        /* -----------------------------  bar  -----------------------------*/
+        * {
+            box-sizing: border-box;
+        }
+
+
+
+        .main {
+
+            padding: 5px;
+            float: left;
+            width: 20%;
+            /* The width is 60%, by default */
+
+            /* ------------------------------------------------------------------------------- */
+        }
+
+        @media screen and (max-width: 800px) {
+
+
+            .main {
+                width: 100%;
+                padding-top: 5vw;
+                padding-left: 25vw;
+                padding-right: 25vw;
+
+                /* The width is 100%, when the viewport is 800px or smaller */
+            }
+        }
+
+
+        /* The width is 100%, when the viewport is 800px or smaller */
+
+
+
+        .best_sellers {
+
+            float: left;
+            width: 12.5%;
+            background-color: white;
+            padding-top: 5vh;
+            padding-right: 1.5vw;
+
+        }
+
+        /* ------------------------------------------------------------------------------- */
+
+        @media screen and (max-width: 800px) {
+            .best_sellers {
+                 width: 50%;
+                 text-align: center;
+                padding-top: 5vw;
+                /* padding-left: 25vw;
+                padding-right: 25vw;  */
+                /* The width is 100%, when the viewport is 800px or smaller */
+            }
+        }
+
+        /* ------------------------------------------------------------------------------- */
+        .hot>img {
+            border-radius: 1vw;
+            width: 24vw;
+            height: 14hw;
+        }
+
+        .hot {
+            border-radius: 0.4vw;
+            float: left;
+            width: 25%;
+
+        }
+
+        @media screen and (max-width: 800px) {
+            .hot {
+                width: 50%;
+                padding-left: 1vw;
+
+            }
+
+            .hot>img {
+                width: 44vw;
+                height: 44vw;
+            }
+        }
+
+        /* ------------------------------------------------------------------------------- */
+        .brands {
+            float: left;
+            width: 12.5%;
+        }
+
+        .brands>img {
+            border-radius: 3vw;
+            width: 10vw;
+            height: 10vw;
+        }
+
+
+
+        @media screen and (max-width: 800px) {
+            .brands {
+                width: 50%;
+                padding-left: 1vw;
+                text-align: center
+            }
+        }
+
+
+
+
+        /* ------------------------------------------------------------------------------- */
+        .Discounts {
+
+            float: left;
+            width: 33%;
+        }
+
+        @media screen and (max-width: 800px) {
+            .Discounts {
+                width: 50%;
+            
+
+            }
+        }
+
+        /* ------------------------------------------------------------------------------- */
+        .column {
+            display: flex;
+        }
+
+        .column>div {
+            width: 100%;
+        }
+
+        /* ------------------------------------------------------------------------------- */
+        .end {
+            float: left;
+            width: 100%;
+        }
+       
+
+        /* Use a media query to add a break point at 800px: */
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <ul>
+            <!-- <div>  -->
+
+            <li style="margin-right: 2vw;"><a href="#pic1"><img src="main_pic/Person.jpg" alt="pic"
+                        style="border-radius: 4vw;width:2vw;height:2vw;"></a></li>
+            <li><a href="#pic2"><img src="main_pic/bascket.jpg" alt="pic"
+                        style="border-radius: 4vw;width:2vw;height:2vw;"></a>
+            </li>
+            <li style="margin-left: 5vw;"><a href="#pic3"><img src="main_pic/magnifier.jpg" alt="pic"
+                        style="border-radius: 4vw;width:2vw;height:2vw;"></a></li>
+
+            <!-- </div> -->
+
+            <!-- <li><a href="#c1">Home</a></li> -->
+            <li><a href="#c2">categories</a></li>
+            <li><a href="#c3">cart</a></li>
+            <li><a href="#c4">my.profile</a></li>
+            <li><a href="#c5">best sellers</a></li>
+            <li><a href="#c6">Discounts</a></li>
+            <li style="margin-right: 5vw;padding-top: 1vw;"><b>barani_shop</b></li>
+        </ul>
+
+    </div>
+
+    <div style="margin-top: 2vh;">
+        <img src="pic_goods/day.jpg" alt="new_day" style="border-radius: 3vw;" width=100%; height="auto">
+    </div>
+
+
+    <!-- ----------------------------------categories--------------------------------------------- -->
+
+
+
+    <div class="main" style="text-align: center;">
+        <form action="/action_page.php" style="padding-left: 0.1vw;">
+            <fieldset>
+                <div>
+                    <img src="pic_goods/clothing.png" alt="pic" style="border-radius: 4vw;width:5vw;height:5vw;"></a>
+                    </li>
+                </div>
+                <div>
+                    <label for="hello" style="text-align:center;"><b>toy</b> </label>
+                </div>
+                <div>
+                    <label for="number" style="text-align:center;margin-top: 2vw;">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
+                </div>
+                <input type="submit" value="read more" style="margin-top: 1.3vw ; text-align:center;">
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="main" style="text-align: center;">
+        <form action="/action_page.php" style="padding-left: 0.1vw;">
+            <fieldset>
+                <div>
+                    <img src="pic_goods/phone.jpg" alt="pic" style="border-radius: 4vw;width:5vw;height:5vw;"></a></li>
+                </div>
+                <div>
+                    <label for="hello" style="text-align:center;"><b>toy</b> </label>
+                </div>
+                <div>
+                    <label for="number" style="text-align:center;margin-top: 2vw;">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
+                </div>
+                <input type="submit" value="read more" style="margin-top: 1.3vw ; text-align:center;">
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="main" style="text-align: center;">
+        <form action="/action_page.php" style="padding-left: 0.1vw;">
+            <fieldset>
+                <div>
+                    <img src="pic_goods/elece.jpg" alt="pic" style="border-radius: 4vw;width:5vw;height:5vw;"></a></li>
+                </div>
+                <div>
+                    <label for="hello" style="text-align:center;"><b>toy</b> </label>
+                </div>
+                <div>
+                    <label for="number" style="text-align:center;margin-top: 2vw;">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
+                </div>
+                <input type="submit" value="read more" style="margin-top: 1.3vw ; text-align:center;">
+            </fieldset>
+        </form>
+    </div>
+    <div class="main" style="text-align: center;">
+        <form action="/action_page.php" style="padding-left: 0.1vw;">
+            <fieldset>
+                <div>
+                    <img src="pic_goods/vegtables.jpg" alt="pic" style="border-radius: 4vw;width:5vw;height:5vw;"></a>
+                    </li>
+                </div>
+                <div>
+                    <label for="hello" style="text-align:center;"><b>toy</b> </label>
+                </div>
+                <div>
+                    <label for="number" style="text-align:center;margin-top: 2vw;">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
+                </div>
+                <input type="submit" value="read more" style="margin-top: 1.3vw ; text-align:center;">
+            </fieldset>
+        </form>
+    </div>
+    <div class="main" style="text-align: center;">
+        <form action="/action_page.php" style="padding-left: 0.1vw;">
+            <fieldset>
+                <div>
+                    <img src="pic_goods/vegtables.jpg" alt="pic" style="border-radius: 4vw;width:5vw;height:5vw;"></a>
+                    </li>
+                </div>
+                <div>
+                    <label for="hello" style="text-align:center;"><b>toy</b> </label>
+                </div>
+                <div>
+                    <label for="number" style="text-align:center;margin-top: 2vw;">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
+                </div>
+                <input type="submit" value="read more" style="margin-top: 1.3vw ; text-align:center;">
+            </fieldset>
+        </form>
+    </div>
+    <div class="main" style="text-align: center;">
+        <form action="/action_page.php" style="padding-left: 0.1vw;">
+            <fieldset>
+                <div>
+                    <img src="pic_goods/vegtables.jpg" alt="pic" style="border-radius: 4vw;width:5vw;height:5vw;"></a>
+                    </li>
+                </div>
+                <div>
+                    <label for="hello" style="text-align:center;"><b>toy</b> </label>
+                </div>
+                <div>
+                    <label for="number" style="text-align:center;margin-top: 2vw;">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
+                </div>
+                <input type="submit" value="read more" style="margin-top: 1.3vw ; text-align:center;">
+            </fieldset>
+        </form>
+    </div>
+    <div class="main" style="text-align: center;">
+        <form action="/action_page.php" style="padding-left: 0.1vw;">
+            <fieldset>
+                <div>
+                    <img src="pic_goods/clothing.png" alt="pic" style="border-radius: 4vw;width:5vw;height:5vw;"></a>
+                    </li>
+                </div>
+                <div>
+                    <label for="hello" style="text-align:center;"><b>toy</b> </label>
+                </div>
+                <div>
+                    <label for="number" style="text-align:center;margin-top: 2vw;">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
+                </div>
+                <input type="submit" value="read more" style="margin-top: 1.3vw ; text-align:center;">
+            </fieldset>
+        </form>
+    </div>
+    <div class="main" style="text-align: center;">
+        <form action="/action_page.php" style="padding-left: 0.1vw;">
+            <fieldset>
+                <div>
+                    <img src="pic_goods/clothing.png" alt="pic" style="border-radius: 4vw;width:5vw;height:5vw;"></a>
+                    </li>
+                </div>
+                <div>
+                    <label for="hello" style="text-align:center;"><b>toy</b> </label>
+                </div>
+                <div>
+                    <label for="number" style="text-align:center;margin-top: 2vw;">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
+                </div>
+                <input type="submit" value="read more" style="margin-top: 1.3vw ; text-align:center;">
+            </fieldset>
+        </form>
+    </div>
+    <div class="main" style="text-align: center;">
+        <form action="/action_page.php" style="padding-left: 0.1vw;">
+            <fieldset>
+                <div>
+                    <img src="pic_goods/clothing.png" alt="pic" style="border-radius: 4vw;width:5vw;height:5vw;"></a>
+                    </li>
+                </div>
+                <div>
+                    <label for="hello" style="text-align:center;"><b>toy</b> </label>
+                </div>
+                <div>
+                    <label for="number" style="text-align:center;margin-top: 2vw;">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
+                </div>
+                <input type="submit" value="read more" style="margin-top: 1.3vw ; text-align:center;">
+            </fieldset>
+        </form>
+    </div>
+    <div class="main" style="text-align: center;">
+        <form action="/action_page.php" style="padding-left: 0.1vw;">
+            <fieldset>
+                <div>
+                    <img src="pic_goods/clothing.png" alt="pic" style="border-radius: 4vw;width:5vw;height:5vw;"></a>
+                    </li>
+                </div>
+                <div>
+                    <label for="hello" style="text-align:center;"><b>toy</b> </label>
+                </div>
+                <div>
+                    <label for="number" style="text-align:center;margin-top: 2vw;">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
+                </div>
+                <input type="submit" value="read more" style="margin-top: 1.3vw ; text-align:center;">
+            </fieldset>
+        </form>
+    </div>
+    <!-- ------------------------------------- best sellers --------------------------------------- -->
+
+
+
+
+    <div class="commodity">
+    </div>
+
+
+
+    <div class="best_sellers">
+        <form action="/action_page.php" style="padding-left: 0.1vw;">
+            <fieldset style="border-radius: 2.5vw;">
+                <img style="border-radius: 1vw;width:10vw;height:15vw;" src="pic_goods/oil.jpg" alt="">
+                <h3> oil bottle</h3>
+                <h5>10$</h5>
+            </fieldset>
+        </form>
+
+    </div>
+    <div class="best_sellers">
+        <form action="/action_page.php" style="padding-left: 0.1vw;">
+            <fieldset style="border-radius: 2.5vw;">
+                <img style="border-radius: 1vw;width:10vw;height:15vw;" src="pic_goods/oil.jpg" alt="">
+                <h3> oil bottle</h3>
+                <h5>10$</h5>
+            </fieldset>
+        </form>
+
+    </div>
+
+    <div class="best_sellers">
+        <form action="/action_page.php" style="padding-left: 0.1vw;">
+            <fieldset style="border-radius: 2.5vw;">
+                <img style="border-radius: 1vw;width:10vw;height:15vw;" src="pic_goods/oil.jpg" alt="">
+                <h3> oil bottle</h3>
+                <h5>10$</h5>
+            </fieldset>
+        </form>
+
+    </div>
+
+    <div class="best_sellers">
+        <form action="/action_page.php" style="padding-left: 0.1vw;">
+            <fieldset style="border-radius: 2.5vw;">
+                <img style="border-radius: 1vw;width:10vw;height:15vw;" src="pic_goods/oil.jpg" alt="">
+                <h3> oil bottle</h3>
+                <h5>10$</h5>
+            </fieldset>
+        </form>
+
+    </div>
+
+    <div class="best_sellers">
+        <form action="/action_page.php" style="padding-left: 0.1vw;">
+            <fieldset style="border-radius: 2.5vw;">
+                <img style="border-radius: 1vw;width:10vw;height:15vw;" src="pic_goods/oil.jpg" alt="">
+                <h3> oil bottle</h3>
+                <h5>10$</h5>
+            </fieldset>
+        </form>
+
+    </div>
+
+    <div class="best_sellers">
+        <form action="/action_page.php" style="padding-left: 0.1vw;">
+            <fieldset style="border-radius: 2.5vw;">
+                <img style="border-radius: 1vw;width:10vw;height:15vw;" src="pic_goods/oil.jpg" alt="">
+                <h3> oil bottle</h3>
+                <h5>10$</h5>
+            </fieldset>
+        </form>
+
+    </div>
+
+    <div class="best_sellers">
+        <form action="/action_page.php" style="padding-left: 0.1vw;">
+            <fieldset style="border-radius: 2.5vw;">
+                <img style="border-radius: 1vw;width:10vw;height:15vw;" src="pic_goods/oil.jpg" alt="">
+                <h3> oil bottle</h3>
+                <h5>10$</h5>
+            </fieldset>
+        </form>
+
+    </div>
+
+    <div class="best_sellers">
+        <form action="/action_page.php" style="padding-left:0.2vw;">
+            <fieldset style="border-radius: 2.5vw;">
+                <img style="border-radius: 1vw;width:10vw;height:15vw;" src="main_pic/shegeft.png" alt="">
+                <h3> oil bottle</h3>
+                <h5>10$</h5>
+            </fieldset>
+        </form>
+
+    </div>
+
+
+
+
+
+
+    <!-- ------------------------------------ about us ------------------------------------ -->
+    <div style="text-align: center;">
+        <h1 style="padding-top: 2vw;"> hottest topics</h1>
+    </div>
+    <!-- ------------------------------------ about us ------------------------------------ -->
+
+    <div class="hot"><img src="main_pic/baby_cloths.png" alt="" style="height:13vw;"> </div>
+    <div class="hot"><img src="main_pic/Buying new household items takes time..png" alt="" style="height:13vw;"></div>
+    <div class="hot"> <img src="main_pic/ramazan.png" alt="" style="height:13vw;"></div>
+    <div class="hot"> <img src="main_pic/camp.png" alt="" style="height:13vw;"></div>
+
+    <div>
+        <h2 style="text-align: center;">Discounts</h2>
+    </div>
+
+    <!-- ----------------------------------------------------------------------------------- -->
+    <div class="Discounts" style="text-align: center;">
+        <form action="/action_page.php" style="padding-left: 0.1vw;">
+            <fieldset>
+                <div>
+                    <img src="pic_goods/clothing.png" alt="pic" style="border-radius: 4vw;width:5vw;height:5vw;"></a>
+                    </li>
+                </div>
+                <div>
+                    <label for="hello" style="text-align:center;"><b>toy</b> </label>
+                </div>
+                <div>
+                    <label for="number" style="text-align:center;margin-top: 2vw;">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
+                </div>
+                <input type="submit" value="read more" style="margin-top: 1.3vw ; text-align:center;">
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="Discounts" style="text-align: center;">
+        <form action="/action_page.php" style="padding-left: 0.1vw;">
+            <fieldset>
+                <div>
+                    <img src="pic_goods/clothing.png" alt="pic" style="border-radius: 4vw;width:5vw;height:5vw;"></a>
+                    </li>
+                </div>
+                <div>
+                    <label for="hello" style="text-align:center;"><b>toy</b> </label>
+                </div>
+                <div>
+                    <label for="number" style="text-align:center;margin-top: 2vw;">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
+                </div>
+                <input type="submit" value="read more" style="margin-top: 1.3vw ; text-align:center;">
+            </fieldset>
+        </form>
+    </div>
+    <div class="Discounts" style="text-align: center;">
+        <form action="/action_page.php" style="padding-left: 0.1vw;">
+            <fieldset>
+                <div>
+                    <img src="pic_goods/clothing.png" alt="pic" style="border-radius: 4vw;width:5vw;height:5vw;"></a>
+                    </li>
+                </div>
+                <div>
+                    <label for="hello" style="text-align:center;"><b>toy</b> </label>
+                </div>
+                <div>
+                    <label for="number" style="text-align:center;margin-top: 2vw;">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
+                </div>
+                <input type="submit" value="read more" style="margin-top: 1.3vw ; text-align:center;">
+            </fieldset>
+        </form>
+    </div>
+    <div class="Discounts" style="text-align: center;">
+        <form action="/action_page.php" style="padding-left: 0.1vw;">
+            <fieldset>
+                <div>
+                    <img src="pic_goods/clothing.png" alt="pic" style="border-radius: 4vw;width:5vw;height:5vw;"></a>
+                    </li>
+                </div>
+                <div>
+                    <label for="hello" style="text-align:center;"><b>toy</b> </label>
+                </div>
+                <div>
+                    <label for="number" style="text-align:center;margin-top: 2vw;">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
+                </div>
+                <input type="submit" value="read more" style="margin-top: 1.3vw ; text-align:center;">
+            </fieldset>
+        </form>
+    </div>
+    <div class="Discounts" style="text-align: center;">
+        <form action="/action_page.php" style="padding-left: 0.1vw;">
+            <fieldset>
+                <div>
+                    <img src="pic_goods/clothing.png" alt="pic" style="border-radius: 4vw;width:5vw;height:5vw;"></a>
+                    </li>
+                </div>
+                <div>
+                    <label for="hello" style="text-align:center;"><b>toy</b> </label>
+                </div>
+                <div>
+                    <label for="number" style="text-align:center;margin-top: 2vw;">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
+                </div>
+                <input type="submit" value="read more" style="margin-top: 1.3vw ; text-align:center;">
+            </fieldset>
+        </form>
+    </div>
+    <div class="Discounts" style="text-align: center;">
+        <form action="/action_page.php" style="padding-left: 0.1vw;">
+            <fieldset>
+                <div>
+                    <img src="pic_goods/clothing.png" alt="pic" style="border-radius: 4vw;width:5vw;height:5vw;"></a>
+                    </li>
+                </div>
+                <div>
+                    <label for="hello" style="text-align:center;"><b>toy</b> </label>
+                </div>
+                <div>
+                    <label for="number" style="text-align:center;margin-top: 2vw;">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
+                </div>
+                <input type="submit" value="read more" style="margin-top: 1.3vw ; text-align:center;">
+            </fieldset>
+        </form>
+    </div>
+
+    <div style="text-align: center;">
+        <h2> Most Popular brands in wrold</h2>
+
+        <div class="brands" style="text-align: center;">
+            <form action="/action_page.php" style="padding-left: 0.1vw;">
+                <fieldset>
+                    <div>
+                        <img src="pic_goods/clothing.png" alt="pic"
+                            style="border-radius: 1vw;width:10vw;height:10vw;"></a>
+                        </li>
+                    </div>
+                    <input type="submit" value="read more" style="margin-top: 1.3vw ; text-align:center;">
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="brands" style="text-align: center;">
+            <form action="/action_page.php" style="padding-left: 0.1vw;">
+                <fieldset>
+                    <div>
+                        <img src="pic_goods/clothing.png" alt="pic"
+                            style="border-radius: 1vw;width:10vw;height:10vw;"></a>
+                        </li>
+                    </div>
+                    <input type="submit" value="read more" style="margin-top: 1.3vw ; text-align:center;">
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="brands" style="text-align: center;">
+            <form action="/action_page.php" style="padding-left: 0.1vw;">
+                <fieldset>
+                    <div>
+                        <img src="pic_goods/clothing.png" alt="pic"
+                            style="border-radius: 1vw;width:10vw;height:10vw;"></a>
+                        </li>
+                    </div>
+                    <input type="submit" value="read more" style="margin-top: 1.3vw ; text-align:center;">
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="brands" style="text-align: center;">
+            <form action="/action_page.php" style="padding-left: 0.1vw;">
+                <fieldset>
+                    <div>
+                        <img src="pic_goods/clothing.png" alt="pic"
+                            style="border-radius: 1vw;width:10vw;height:10vw;"></a>
+                        </li>
+                    </div>
+                    <input type="submit" value="read more" style="margin-top: 1.3vw ; text-align:center;">
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="brands" style="text-align: center;">
+            <form action="/action_page.php" style="padding-left: 0.1vw;">
+                <fieldset>
+                    <div>
+                        <img src="pic_goods/clothing.png" alt="pic"
+                            style="border-radius: 1vw;width:10vw;height:10vw;"></a>
+                        </li>
+                    </div>
+                    <input type="submit" value="read more" style="margin-top: 1.3vw ; text-align:center;">
+                </fieldset>
+            </form>
+        </div>
+        <div class="brands" style="text-align: center;">
+            <form action="/action_page.php" style="padding-left: 0.1vw;">
+                <fieldset>
+                    <div>
+                        <img src="pic_goods/clothing.png" alt="pic"
+                            style="border-radius: 1vw;width:10vw;height:10vw;"></a>
+                        </li>
+                    </div>
+                    <input type="submit" value="read more" style="margin-top: 1.3vw ; text-align:center;">
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="brands" style="text-align: center;">
+            <form action="/action_page.php" style="padding-left: 0.1vw;">
+                <fieldset>
+                    <div>
+                        <img src="pic_goods/clothing.png" alt="pic"
+                            style="border-radius: 1vw;width:10vw;height:10vw;"></a>
+                        </li>
+                    </div>
+                    <input type="submit" value="read more" style="margin-top: 1.3vw ; text-align:center;">
+                </fieldset>
+            </form>
+        </div>
+        <div class="brands" style="text-align: center;">
+            <form action="/action_page.php" style="padding-left: 0.1vw;">
+                <fieldset>
+                    <div>
+                        <img src="pic_goods/clothing.png" alt="pic"
+                            style="border-radius: 1vw;width:10vw;height:10vw;"></a>
+                        </li>
+                    </div>
+                    <input type="submit" value="read more" style="margin-top: 1.3vw ; text-align:center;">
+                </fieldset>
+            </form>
+        </div>
+        <!-- ----------------------------------------------------------------------------------- -->
+
+    <div class="end" style="text-align: center;padding-top: 2vw;">
+        <form action="submit.php" method="post">
+            <fieldset style="border-radius: 1vw;">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="comment">Comment:</label><br>
+                <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br><br>
+
+                <input type="submit" value="Submit">
+
+
+                <h2> Stay with us</h2>
+                <a href="#c2"><img src="app/black-telegram.jpg" alt=""
+                        style="border-radius:2vw;width:5vw;height:5vw;"></a></li>
+                <a href="#c3"><img src="app/instagram.jpg" alt="" style="border-radius:2vw;width:5vw;height:5vw;"></a>
+                </li>
+                <a href="#c4"><img src="app/whatsapp.png" alt="" style="border-radius:2vw;width:5vw;height:5vw;"></a>
+                </li>
+            </fieldset>
+        </form>
+    </div>
+
+        <!-- <div class="row">
+        <div class="column">
+            <h1>ldfsdfsdf</h1>
+        </div>
+
+        <div class="column">
+            <h1 id="c1">fsfczdfzd</h1>
+        </div>
+
+    </div> -->
+
+
+
+
+
+</body>
+
+</html>
