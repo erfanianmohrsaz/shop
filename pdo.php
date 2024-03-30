@@ -1,5 +1,5 @@
 <?php
-require "ppdo.php";
-$dbpath = '../db.db' ;
+require_once "ppdo.php";
+require_once "config.php";
 $dsn = "sqlite:$dbpath";
 $dbh= pdo($dsn);
