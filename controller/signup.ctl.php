@@ -1,5 +1,8 @@
 <?php
-require "../model/pdo.php";
+require_once "../model/pdo.php";
+require_once "../model/user.php";
+require_once "../controller/login.php";
+
 function signin_array()
 {
 	return [ 
@@ -17,12 +20,6 @@ function signin_array()
 			"phone"=>$_POST["phone"],
 		]
 	];
-}
-function userrow(PDO $dbh,string $nameemail){
-	$sth=pdo_prepare($dbh,"SELECT username , passhash FROM users WHERE username = :nameemail OR email = :nameemail");
-	pdo_exec($sth,["nameemail"=> $nameemail]);
-	$row=pdo_fetch($sth);
-	return $row; 
 }
 function insert_user (PDO $dbh,array $users){
 	$row=userrow($dbh,$users["needed"]["user"]);
@@ -84,7 +81,11 @@ function validate_signins(PDO $dbh,$signins)
 if ($_SERVER['REQUEST_METHOD']==='POST')
 {
 	$signins = signin_array();
-	echo count($signins);
 	$error=validate_signins($dbh,$signins);
+	if (!$error){
+		$row=find_userid($dbh,$signins["needed"]["user"]);
+		login($row["userid"]);
+		header('location: /view/index.php');
+	}
 
 }
