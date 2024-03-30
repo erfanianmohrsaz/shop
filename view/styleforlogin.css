@@ -69,7 +69,7 @@ h2 {
 }
 
 .input-box input:focus,
-.input-box input:valid {
+.input-box input:not(:placeholder-shown) {
   border-color: var(--border-col2);
 }
 
@@ -85,7 +85,7 @@ h2 {
 }
 
 .input-box input:focus ~ label,
-.input-box input:valid ~ label {
+.input-box input:not(:placeholder-shown) ~ label {
   top: 1px;
   font-size: 0.8em;
   background-color: #1f293a;
