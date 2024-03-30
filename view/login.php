@@ -1,4 +1,4 @@
-<?php require "../login.php"; ?>
+<?php require "../controller/login.php"; ?>
 <!DOCTYPE html>
 <html lang="en" >
 <head>

@@ -1,4 +1,4 @@
-<?php require "../signup.php" ?>
+<?php require "../controller/signup.php" ?>
 <!DOCTYPE html>
 <style>
 label:empty {

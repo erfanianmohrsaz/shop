@@ -1,5 +1,5 @@
 <?php
-require "pdo.php";
+require "../model/pdo.php";
 function signin_array()
 {
 	return [ 

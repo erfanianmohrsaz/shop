@@ -1,7 +1,7 @@
 <?php
-require_once "pdo.php";
-require_once "encrypt.php";
-require_once "config.php";
+require_once "../model/pdo.php";
+require_once "../lib/encrypt.php";
+require_once "../lib/config.php";
 
 if (($userid=loggedin())!==false) {
 	header('location: /index.php');
