@@ -1,21 +1,30 @@
 <?php
-require "pdo.php";
+require_once "../model/pdo.php";
+require_once "../lib/encrypt.php";
+require_once "../model/user.php";
+require_once "../controller/login.php";
+
+if (($userid=loggedin())!==false) {
+	header('location: /view/index.php');
+}
+
+
 function login_array()
 {
 	return [ "user" => $_POST["user"],"pass"=> $_POST["pass"] ];
 }
-function userrow(PDO $dbh,string $nameemail){
-	$sth=pdo_prepare($dbh,"SELECT username , passhash FROM users WHERE username = :nameemail OR email = :nameemail");
-	pdo_exec($sth,["nameemail"=> $nameemail]);
-	$row=pdo_fetch($sth);
-	return $row; 
-}
-function auth_user(PDO $dbh,string $nameemail,string $password){
-	$row=userrow($dbh,$nameemail);
+function auth_user(PDO $dbh,array $logins){
+	$row=userrow($dbh,$logins["user"]);
 	if(!$row){
 		return ["user"=>"User not found"];
 	}
-	return password_verify($password,$row["passhash"])?true:["pass"=>"Wrong password"];
+	if (!password_verify($logins["pass"],$row["passhash"]))
+	{
+		return ["pass"=>"Wrong password"];
+	}
+	login($row["userid"]);
+		return true;
+	
 }
 function validate_logins(PDO $dbh,$logins)
 {
@@ -30,12 +39,10 @@ function validate_logins(PDO $dbh,$logins)
 	{ $error["pass"] = "Input printable charterers"; }
 	if ($error)
 	{ return $error; }
-	return auth_user($dbh,$logins["user"],$logins["pass"]);
+	return auth_user($dbh,$logins);
 }
 if ($_SERVER['REQUEST_METHOD']==='POST')
 {
 	$logins = login_array();
-	echo count($logins);
 	$error=validate_logins($dbh,$logins);
 }
-

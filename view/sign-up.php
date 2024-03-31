@@ -1,12 +1,11 @@
-<?php require "../signup.php" ?>
+<?php require "../controller/signup.ctl.php" ?>
 <!DOCTYPE html>
 <style>
 label:empty {
-/* display: none;
+ display: none;
 }
 </style>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>ثبت نام</title>
@@ -25,39 +24,39 @@ label:empty {
         <main>
                   <!-- Important parameters -->
           <div class="input-box">
-            <input type="text" required name="user" >
+	  <input placeholder="" type="text" required name="user" value=<?=htmlentities($signins["needed"]["user"]??'')?>  >
             <label>نام کاربری</label>
           </div>
 	  <label class="danger"><?=$error["user"]??null?></label>
           <div class="input-box">
-            <input  type=password required name="pass">
+            <input placeholder=""  type=password required name="pass" value=<?=htmlentities($signins["needed"]["pass"]??'')?>>
             <label> رمز </label>
           </div>
 <label class="danger"><?=$error["pass"]??null?></label>
           <div class="input-box">
-            <input type=password required name="passrpt">
+            <input placeholder="" type=password required name="passrpt" value=<?=htmlentities($signins["needed"]["passrpt"]??'')?>>
             <label>تکرار رمز </label>
           </div>
 <label class="danger"><?=$error["passrpt"]??null?></label>
           <div class="input-box">
-            <input type=email required name="email">
+            <input dir="ltr" placeholder="" type=email required name="email" value=<?=htmlentities($signins["needed"]["email"]??'')?>>
             <label>ایمیل</label>
           </div>
 <label class="danger"><?=$error["email"]??null?></label>
           <hr>
                    <!-- Unmportant parameters -->
           <div class="input-box">
-            <input name="name">
+            <input type="text" name="name" placeholder="" value=<?=htmlentities($signins["optional"]["name"]??'')?>>
             <label>نام </label>
           </div>
           <label class="danger"><?=$error["name"]??null?></label>
           <div class="input-box">
-            <input type="text"  required name="last">
+            <input placeholder="" type="text"  name="last" value=<?=htmlentities($signins["optional"]["last"]??'')?>>
             <label>نام خانوادگی</label>
           </div>
 <label class="danger"><?=$error["last"]??null?></label>
           <div class="input-box">
-            <input type="text" required name="phone">
+            <input placeholder="" type="text" name="phone" value=<?=htmlentities($signins["optional"]["phone"]??'')?>>
             <label>شماره همراه</label>
           </div>
 <label class="danger"><?=$error["phone"]??null?></label>

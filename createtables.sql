@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS users (
 CREATE TABLE IF NOT EXISTS items (
 	itemid 			INTEGER   PRIMARY KEY,
 	price 			INTEGER	  NOT NULL,
-	category 		TEXT			  ,
+	category 		TEXT,
 	name	   	    	TEXT 	  NOT NULL,
 	number_left 		INTEGER   NOT NULL, 
 	creation_date   	INTEGER   NOT NULL,
@@ -46,4 +46,9 @@ CREATE TABLE IF NOT EXISTS basket (
 	itemid 			INTEGER		NOT NULL,
 	itemcount 			INTEGER		NOT NULL,
 	FOREIGN KEY (itemid) REFERENCES items (itemid) ON DELETE NO ACTION
+	);
+CREATE TABLE IF NOT EXISTS categories (
+	categoryid	TEXT	PRIMARY KEY,
+	categoryname	TEXT	NOT NULL,
+	categoryimage	TEXT
 	);
