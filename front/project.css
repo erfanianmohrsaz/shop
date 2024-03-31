@@ -93,3 +93,54 @@ img {
     max-width: 100%;
     text-align: center;
   }
+
+  .top-bar {
+    background-color: #4682b4;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .second-row {
+    background-color:#4682b4 ;
+    color: #fff;
+    padding: 10px;
+  }
+  .left-items {
+    margin-right: auto;
+}
+
+.right-items {
+    margin-left: auto;
+}
+  .btn {
+    background-color: #fff;
+    color: #4682b4;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: #ccc;
+  }
+
+  .nav-item {
+    color: #fff; 
+    text-decoration: none;
+    margin: 0 10px;
+  }
+
+.nav-item:not(:last-child):hover {
+    background-color: rgba(200, 200, 200, 0.5);
+}
+
+.nav-item:hover {
+    font-weight: bold;
+}
