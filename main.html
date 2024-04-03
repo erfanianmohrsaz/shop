@@ -14,7 +14,7 @@
         /* -----------------------------  navbar respansive  -----------------------------*/
         .navbar {
 
-            justify-content: space-between;
+           
             align-items: center;
             background-color: #333;
             color: #fff;
@@ -76,6 +76,40 @@
 
         }
 
+        /* Categories Link */
+        a[href="#"] {
+            margin-left: 5vw;
+        }
+
+        /* Dropdown Content */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Dropdown Image Styles */
+        .dropdown-content a img {
+            width: 1.5vw;
+            height: 1.5vw;
+            margin-right: 0.5vw;
+        }
+
+
         .navbar .icon {
             display: none;
         }
@@ -124,10 +158,14 @@
 
         /* -----------------------------  categories  -----------------------------*/
         .main {
+            margin-top:1vw;
             padding: 5px;
             float: left;
-            width: 20%;
+            width: 18.5%;
             text-align: center;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+            margin-left: 1vw;
         }
 
         form {
@@ -138,8 +176,16 @@
             border-radius: 4vw;
             width: 5vw;
             height: 5vw;
+             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease-in-out;
+            object-fit: cover;
+           
         }
-
+        .main_pictures:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+    
         .main_title>label[for="hello"] {
             text-align: center;
             font-weight: bold;
@@ -150,9 +196,25 @@
             margin-top: 2vw;
         }
 
-        .main>input[type="submit"] {
-            margin-top: 1.3vw;
-            text-align: center;
+        .main button {
+            margin-top: 1vw;
+            padding: 4px 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+
+            background-color: #007bff;
+            border: none;
+            border-radius: 0.3vw;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1rem;
+
+            transition: background-color 0.3s ease;
+        }
+
+        .main button:hover {
+            background-color: darkturquoise;
         }
 
         @media screen and (max-width: 800px) {
@@ -166,7 +228,7 @@
 
 
         /* ----------------------------------------hot_topics---------------------------------- */
-        .hot>img {
+        .hot>img{
             border-radius: 1vw;
             width: 24vw;
             height: 13vw;
@@ -187,9 +249,8 @@
             }
 
             .hot>img {
-              
-                width: 70vw;
-                height: 70vw;
+                width: 44vw;
+                height: 44vw;
             }
         }
 
@@ -197,7 +258,6 @@
         .brands {
             float: left;
             width: 12.5%;
-            text-align: center;
         }
 
         form {
@@ -210,9 +270,24 @@
             height: 10vw;
         }
 
-        input[type="submit"] {
-            margin-top: 1.3vw;
-            text-align: center;
+        .brands button {
+            padding: 4px 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+
+            background-color:darkmagenta;
+            border: none;
+            border-radius: 0.3vw;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1rem;
+
+            transition: background-color 0.3s ease;
+        }
+
+        .brands button:hover {
+            background-color:fuchsia;
         }
 
         @media screen and (max-width: 800px) {
@@ -227,12 +302,38 @@
 
 
         /* -----------------------------------Discounts-------------------------------------------- */
+       
+       .Discounts>img{
+        width: 6vw;
+        height: 6vw;
+        border-radius: 2vw;
+       }
         .Discounts {
             width: 20%;
             text-align: center;
             float: left;
             border: 1px solid #ccc;
             padding: 20px;
+        }
+        .Discounts button {
+            margin-top: 1vw;
+            padding: 4px 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+
+            background-color:forestgreen;
+            border: none;
+            border-radius: 0.3vw;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1rem;
+
+            transition: background-color 0.3s ease;
+        }
+
+        .Discounts button:hover {
+            background-color:darkseagreen;
         }
 
         @media screen and (max-width: 800px) {
@@ -278,7 +379,8 @@
 
         /* ------------------------------------- scroll_ for best sellers------------------------------------------ */
         .scroll-wrapper {
-            margin-top: 2vw;
+            padding: 1vw;
+            margin-top: 0.5vw;
             display: inline-block;
             width: 100%;
             overflow-x: auto;
@@ -299,7 +401,7 @@
             background-color: #f1f1f1;
             margin-right: 20px;
             text-align: center;
-            /* line-height: 100px; */
+
 
         }
 
@@ -309,6 +411,35 @@
             width: 5vw;
             height: 5vw;
         }
+
+
+
+
+
+        .item button {
+            margin-top: 1vw;
+            padding: 4px 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+
+            background-color:darkred;
+            border: none;
+            border-radius: 0.3vw;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1rem;
+
+            transition: background-color 0.3s ease;
+        }
+
+        .item button:hover {
+            background-color:crimson;
+        }
+
+
+
+
 
         @media screen and (max-width: 800px) {
             .scroll-content .item {
@@ -330,37 +461,27 @@
 <body>
     <!-- ------------------------------------- navbar ----------------------------------------- -->
     <div class="navbar" id="myNavbar">
-        <a href="#" style="margin-left: 10vw;">Home</a>
+        <a href="main.html" style="margin-left: 10vw;">Home</a>
 
         <div class="dropdown">
 
-            <a href="#" style="margin-left: 5vw;">Categories</a>
+            <a href="#">Categories</a>
             <div class="dropdown-content">
-                <a href="#"><img src="categories/phone.png" alt=""
-                        style="width: 1.5vw;height: 1.5vw;margin-right: 0.5vw;"> Phone</a>
-                <a href="#"><img src="categories/Home appliances.png" alt=""
-                        style="width: 1.5vw;height: 1.5vw;margin-right: 0.5vw;"> Home appliances</a>
-                <a href="#"><img src="categories/digital.png" alt=""
-                        style="width: 1.5vw;height: 1.5vw;margin-right: 0.5vw;"> Digital products</a>
-                <a href="#"><img src="categories/Kitchen .png" alt=""
-                        style="width: 1.5vw;height: 1.5vw;margin-right: 0.5vw;">Kitchen appliances</a>
-                <a href="#"><img src="categories/clothing.png" alt=""
-                        style="width: 1.5vw;height: 1.5vw;margin-right: 0.5vw;">Fashion & clothing</a>
-                <a href="#"><img src="categories/Supermarket goods.png" alt=""
-                        style="width: 1.5vw;height: 1.5vw;margin-right: 0.5vw;">Supermarket goods</a>
-                <a href="#"><img src="categories/camp.png" alt=""
-                        style="width: 1.5vw;height: 1.5vw;margin-right: 0.5vw;"> travel</a>
-                <a href="#"><img src="categories/sport.png" alt=""
-                        style="width: 1.5vw;height: 1.5vw;margin-right: 0.5vw;">Sports </a>
-                <a href="#"><img src="categories/tools.png" alt=""
-                        style="width: 1.5vw;height: 1.5vw;margin-right: 0.5vw;">Tools</a>
+                <a href="Home appliances.html"><img src="categories/phone.png" alt=""> Home Appliances</a>
+                <a href="phone.html"><img src="categories/Home appliances.png" alt="">Phone </a>
+                <a href="Digital products.html"><img src="categories/digital.png" alt=""> Digital Products</a>
+                <a href="Kitchen appliances.html"><img src="categories/Kitchen .png" alt="">Kitchen Appliances</a>
+                <a href="Fashion & clothing.html"><img src="categories/clothing.png" alt="">Fashion & Clothing</a>
+                <a href="Supermarket goods.html"><img src="categories/Supermarket goods.png" alt="">Supermarket Goods</a>
+                <a href="travel.html"><img src="categories/camp.png" alt=""> Travel</a>
+                <a href="sports.html"><img src="categories/sport.png" alt="">Sports </a>
+                <a href="tools.html"><img src="categories/tools.png" alt="">Tools</a>
             </div>
-
-
+            
         </div>
-        <a href="#" style="margin-left: 5vw;">Discounts</a>
-        <a href="#" style="margin-left: 5vw;">My.Profile</a>
-        <a href="#" style="margin-left: 5vw;">Best Sellers</a>
+        <a href="#Discounts" style="margin-left: 5vw;">Discounts</a>
+        <a href="my_profile.html" style="margin-left: 5vw;">My.Profile</a>
+        <a href="#best sellers" style="margin-left: 5vw;">Best Sellers</a>
 
 
 
@@ -404,272 +525,250 @@
 
     <div class="main">
         <form action="/action_page.php">
-            <fieldset>
                 <div class="main_pictures">
-                    <img src="pic_goods/clothing.png" alt="pic"></a>
+                    <img src="test.PNG" alt="pic"></a>
                     </li>
                 </div>
                 <div class="main_title">
-                    <label for="hello"><b>toy</b> </label>
+                    <label for="hello"><b>test</b> </label>
                 </div>
                 <div class="par">
                     <label for="number">Lorem ipsum dolor sit, amet
                         consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
                 </div>
-                <input type="submit" value="read more">
-            </fieldset>
-        </form>
-    </div>
-    <div class="main">
-        <form action="/action_page.php">
-            <fieldset>
-                <div class="main_pictures">
-                    <img src="pic_goods/clothing.png" alt="pic"></a>
-                    </li>
-                </div>
-                <div class="main_title">
-                    <label for="hello"><b>toy</b> </label>
-                </div>
-                <div class="par">
-                    <label for="number">Lorem ipsum dolor sit, amet
-                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
-                </div>
-                <input type="submit" value="read more">
-            </fieldset>
-        </form>
-    </div>
-
-    <div class="main">
-        <form action="/action_page.php">
-            <fieldset>
-                <div class="main_pictures">
-                    <img src="pic_goods/clothing.png" alt="pic"></a>
-                    </li>
-                </div>
-                <div class="main_title">
-                    <label for="hello"><b>toy</b> </label>
-                </div>
-                <div class="par">
-                    <label for="number">Lorem ipsum dolor sit, amet
-                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
-                </div>
-                <input type="submit" value="read more">
-            </fieldset>
-        </form>
-    </div>
-
-    <div class="main">
-        <form action="/action_page.php">
-            <fieldset>
-                <div class="main_pictures">
-                    <img src="pic_goods/clothing.png" alt="pic"></a>
-                    </li>
-                </div>
-                <div class="main_title">
-                    <label for="hello"><b>toy</b> </label>
-                </div>
-                <div class="par">
-                    <label for="number">Lorem ipsum dolor sit, amet
-                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
-                </div>
-                <input type="submit" value="read more">
-            </fieldset>
-        </form>
-    </div>
-
-    <div class="main">
-        <form action="/action_page.php">
-            <fieldset>
-                <div class="main_pictures">
-                    <img src="pic_goods/clothing.png" alt="pic"></a>
-                    </li>
-                </div>
-                <div class="main_title">
-                    <label for="hello"><b>toy</b> </label>
-                </div>
-                <div class="par">
-                    <label for="number">Lorem ipsum dolor sit, amet
-                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
-                </div>
-                <input type="submit" value="read more">
-            </fieldset>
-        </form>
-    </div>
-
-    <div class="main">
-        <form action="/action_page.php">
-            <fieldset>
-                <div class="main_pictures">
-                    <img src="pic_goods/clothing.png" alt="pic"></a>
-                    </li>
-                </div>
-                <div class="main_title">
-                    <label for="hello"><b>toy</b> </label>
-                </div>
-                <div class="par">
-                    <label for="number">Lorem ipsum dolor sit, amet
-                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
-                </div>
-                <input type="submit" value="read more">
-            </fieldset>
-        </form>
-    </div>
-
-    <div class="main">
-        <form action="/action_page.php">
-            <fieldset>
-                <div class="main_pictures">
-                    <img src="pic_goods/clothing.png" alt="pic"></a>
-                    </li>
-                </div>
-                <div class="main_title">
-                    <label for="hello"><b>toy</b> </label>
-                </div>
-                <div class="par">
-                    <label for="number">Lorem ipsum dolor sit, amet
-                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
-                </div>
-                <input type="submit" value="read more">
-            </fieldset>
-        </form>
-    </div>
-
-    <div class="main">
-        <form action="/action_page.php">
-            <fieldset>
-                <div class="main_pictures">
-                    <img src="pic_goods/clothing.png" alt="pic"></a>
-                    </li>
-                </div>
-                <div class="main_title">
-                    <label for="hello"><b>toy</b> </label>
-                </div>
-                <div class="par">
-                    <label for="number">Lorem ipsum dolor sit, amet
-                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
-                </div>
-                <input type="submit" value="read more">
-            </fieldset>
-        </form>
-    </div>
-
-    <div class="main">
-        <form action="/action_page.php">
-            <fieldset>
-                <div class="main_pictures">
-                    <img src="pic_goods/clothing.png" alt="pic"></a>
-                    </li>
-                </div>
-                <div class="main_title">
-                    <label for="hello"><b>toy</b> </label>
-                </div>
-                <div class="par">
-                    <label for="number">Lorem ipsum dolor sit, amet
-                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
-                </div>
-                <input type="submit" value="read more">
-            </fieldset>
-        </form>
-    </div>
-    <div class="main">
-        <form action="/action_page.php">
-            <fieldset>
-                <div class="main_pictures">
-                    <img src="pic_goods/clothing.png" alt="pic"></a>
-                    </li>
-                </div>
-                <div class="main_title">
-                    <label for="hello"><b>toy</b> </label>
-                </div>
-                <div class="par">
-                    <label for="number">Lorem ipsum dolor sit, amet
-                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
-                </div>
-                <input type="submit" value="read more">
-            </fieldset>
+                <button> read more</button>
         </form>
     </div>
 
 
+
+    <div class="main">
+        <form action="/action_page.php">
+                <div class="main_pictures">
+                    <img src="test.PNG" alt="pic"></a>
+                    </li>
+                </div>
+                <div class="main_title">
+                    <label for="hello"><b>test</b> </label>
+                </div>
+                <div class="par">
+                    <label for="number">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
+                </div>
+                <button> read more</button>
+        </form>
+    </div>
+    
+    <div class="main">
+        <form action="/action_page.php">
+                <div class="main_pictures">
+                    <img src="test.PNG" alt="pic"></a>
+                    </li>
+                </div>
+                <div class="main_title">
+                    <label for="hello"><b>test</b> </label>
+                </div>
+                <div class="par">
+                    <label for="number">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
+                </div>
+                <button> read more</button>
+        </form>
+    </div>
+
+     <div class="main">
+        <form action="/action_page.php">
+                <div class="main_pictures">
+                    <img src="test.PNG" alt="pic"></a>
+                    </li>
+                </div>
+                <div class="main_title">
+                    <label for="hello"><b>test</b> </label>
+                </div>
+                <div class="par">
+                    <label for="number">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
+                </div>
+                <button> read more</button>
+        </form>
+     </div>
+     <div class="main">
+        <form action="/action_page.php">
+                <div class="main_pictures">
+                    <img src="test.PNG" alt="pic"></a>
+                    </li>
+                </div>
+                <div class="main_title">
+                    <label for="hello"><b>test</b> </label>
+                </div>
+                <div class="par">
+                    <label for="number">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
+                </div>
+                <button> read more</button>
+        </form>
+    </div>
+    <div class="main">
+        <form action="/action_page.php">
+                <div class="main_pictures">
+                    <img src="test.PNG" alt="pic"></a>
+                    </li>
+                </div>
+                <div class="main_title">
+                    <label for="hello"><b>test</b> </label>
+                </div>
+                <div class="par">
+                    <label for="number">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
+                </div>
+                <button> read more</button>
+        </form>
+    </div>
+    <div class="main">
+        <form action="/action_page.php">
+                <div class="main_pictures">
+                    <img src="test.PNG" alt="pic"></a>
+                    </li>
+                </div>
+                <div class="main_title">
+                    <label for="hello"><b>test</b> </label>
+                </div>
+                <div class="par">
+                    <label for="number">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
+                </div>
+                <button> read more</button>
+        </form>
+    </div>
+
+     <div class="main">
+        <form action="/action_page.php">
+                <div class="main_pictures">
+                    <img src="test.PNG" alt="pic"></a>
+                    </li>
+                </div>
+                <div class="main_title">
+                    <label for="hello"><b>test</b> </label>
+                </div>
+                <div class="par">
+                    <label for="number">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
+                </div>
+                <button> read more</button>
+        </form>
+    </div> <div class="main">
+        <form action="/action_page.php">
+                <div class="main_pictures">
+                    <img src="test.PNG" alt="pic"></a>
+                    </li>
+                </div>
+                <div class="main_title">
+                    <label for="hello"><b>test</b> </label>
+                </div>
+                <div class="par">
+                    <label for="number">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
+                </div>
+                <button> read more</button>
+        </form>
+    </div>
+
+     <div class="main">
+        <form action="/action_page.php">
+                <div class="main_pictures">
+                    <img src="test.PNG" alt="pic"></a>
+                    </li>
+                </div>
+                <div class="main_title">
+                    <label for="hello"><b>test</b> </label>
+                </div>
+                <div class="par">
+                    <label for="number">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Ratione, cum veritatis?</label><br>
+                </div>
+                <button> read more</button>
+        </form>
+    </div>
+    
+    
     <!-- ------------------------------------- best sellers --------------------------------------- -->
+    <h2 id="best sellers" style="text-align:center;">best sellers</h2>
     <div class="scroll-wrapper">
 
         <div class="scroll-content">
 
             <div class="item">
-                <img src="categories/camp.png" alt="Product Image">
+                <img src="test.PNG" alt="Product Image">
                 <h3 class="product-title">Product Name</h3>
                 <span class="original-price">$100</span>
                 <span class="discounted-price">$80</span>
                 <span class="discount-percentage">20% OFF</span>
-                <div><input type="submit" value="read more"></div>
+                <div class="item_button"> <button> read more</button></div>
             </div>
             <div class="item">
-                <img src="categories/camp.png" alt="Product Image">
+                <img src="test.PNG" alt="Product Image">
                 <h3 class="product-title">Product Name</h3>
                 <span class="original-price">$100</span>
                 <span class="discounted-price">$80</span>
                 <span class="discount-percentage">20% OFF</span>
-                <div><input type="submit" value="read more"></div>
+                <div class="item_button"> <button> read more</button></div>
+            </div> <div class="item">
+                <img src="test.PNG" alt="Product Image">
+                <h3 class="product-title">Product Name</h3>
+                <span class="original-price">$100</span>
+                <span class="discounted-price">$80</span>
+                <span class="discount-percentage">20% OFF</span>
+                <div class="item_button"> <button> read more</button></div>
+            </div> <div class="item">
+                <img src="test.PNG" alt="Product Image">
+                <h3 class="product-title">Product Name</h3>
+                <span class="original-price">$100</span>
+                <span class="discounted-price">$80</span>
+                <span class="discount-percentage">20% OFF</span>
+                <div class="item_button"> <button> read more</button></div>
+            </div> <div class="item">
+                <img src="test.PNG" alt="Product Image">
+                <h3 class="product-title">Product Name</h3>
+                <span class="original-price">$100</span>
+                <span class="discounted-price">$80</span>
+                <span class="discount-percentage">20% OFF</span>
+                <div class="item_button"> <button> read more</button></div>
+            </div> <div class="item">
+                <img src="test.PNG" alt="Product Image">
+                <h3 class="product-title">Product Name</h3>
+                <span class="original-price">$100</span>
+                <span class="discounted-price">$80</span>
+                <span class="discount-percentage">20% OFF</span>
+                <div class="item_button"> <button> read more</button></div>
+            </div> <div class="item">
+                <img src="test.PNG" alt="Product Image">
+                <h3 class="product-title">Product Name</h3>
+                <span class="original-price">$100</span>
+                <span class="discounted-price">$80</span>
+                <span class="discount-percentage">20% OFF</span>
+                <div class="item_button"> <button> read more</button></div>
+            </div> <div class="item">
+                <img src="test.PNG" alt="Product Image">
+                <h3 class="product-title">Product Name</h3>
+                <span class="original-price">$100</span>
+                <span class="discounted-price">$80</span>
+                <span class="discount-percentage">20% OFF</span>
+                <div class="item_button"> <button> read more</button></div>
+            </div> <div class="item">
+                <img src="test.PNG" alt="Product Image">
+                <h3 class="product-title">Product Name</h3>
+                <span class="original-price">$100</span>
+                <span class="discounted-price">$80</span>
+                <span class="discount-percentage">20% OFF</span>
+                <div class="item_button"> <button> read more</button></div>
+            </div> <div class="item">
+                <img src="test.PNG" alt="Product Image">
+                <h3 class="product-title">Product Name</h3>
+                <span class="original-price">$100</span>
+                <span class="discounted-price">$80</span>
+                <span class="discount-percentage">20% OFF</span>
+                <div class="item_button"> <button> read more</button></div>
             </div>
-            <div class="item">
-                <img src="categories/camp.png" alt="Product Image">
-                <h3 class="product-title">Product Name</h3>
-                <span class="original-price">$100</span>
-                <span class="discounted-price">$80</span>
-                <span class="discount-percentage">20% OFF</span>
-                <div><input type="submit" value="read more"></div>
-            </div>
-            <div class="item">
-                <img src="categories/camp.png" alt="Product Image">
-                <h3 class="product-title">Product Name</h3>
-                <span class="original-price">$100</span>
-                <span class="discounted-price">$80</span>
-                <span class="discount-percentage">20% OFF</span>
-                <div><input type="submit" value="read more"></div>
-            </div>
-            <div class="item">
-                <img src="categories/camp.png" alt="Product Image">
-                <h3 class="product-title">Product Name</h3>
-                <span class="original-price">$100</span>
-                <span class="discounted-price">$80</span>
-                <span class="discount-percentage">20% OFF</span>
-                <div><input type="submit" value="read more"></div>
-            </div>
-            <div class="item">
-                <img src="categories/camp.png" alt="Product Image">
-                <h3 class="product-title">Product Name</h3>
-                <span class="original-price">$100</span>
-                <span class="discounted-price">$80</span>
-                <span class="discount-percentage">20% OFF</span>
-                <div><input type="submit" value="read more"></div>
-            </div>
-            <div class="item">
-                <img src="categories/camp.png" alt="Product Image">
-                <h3 class="product-title">Product Name</h3>
-                <span class="original-price">$100</span>
-                <span class="discounted-price">$80</span>
-                <span class="discount-percentage">20% OFF</span>
-                <div><input type="submit" value="read more"></div>
-            </div>
-            <div class="item">
-                <img src="categories/camp.png" alt="Product Image">
-                <h3 class="product-title">Product Name</h3>
-                <span class="original-price">$100</span>
-                <span class="discounted-price">$80</span>
-                <span class="discount-percentage">20% OFF</span>
-                <div><input type="submit" value="read more"></div>
-            </div>
-
-            <div class="item">
-                <img src="categories/camp.png" alt="Product Image">
-                <h3 class="product-title">Product Name</h3>
-                <span class="original-price">$100</span>
-                <span class="discounted-price">$80</span>
-                <span class="discount-percentage">20% OFF</span>
-                <div><input type="submit" value="read more"></div>
-            </div>/;ou
-
 
 
         </div>
@@ -681,112 +780,113 @@
     </div>
     <!-- ------------------------------------  hottest topics ------------------------------------ -->
 
-    <div class="hot"><a href="" class="pictur"><img src="main_pic/baby_cloths.png" alt=""
-                style=" border-radius: 1vw; width: 24vw; height: 13vw;"> </div></a>
-    <div class="hot"><a href="" class="pictur"><img src="main_pic/Buying new household items takes time..png" alt=""
-                style=" border-radius: 1vw; width: 24vw; height: 13vw;"></a></div>
-    <div class="hot"> <a href="" class="pictur"><img src="main_pic/ramazan.png" alt=""
-                style=" border-radius: 1vw; width: 24vw; height: 13vw;"></div></a>
-    <div class="hot"> <a href="" class="pictur"><img src="main_pic/camp.png" alt=""
-                style=" border-radius: 1vw; width: 24vw; height: 13vw;"></div></a>
+    <div class="hot"><img src="main_pic/baby_cloths.png" alt="" >
+       </div>
+    <div class="hot"><img src="main_pic/Buying new household items takes time..png" alt=""> 
+      
+    </div>
+    <div class="hot"><img src="main_pic/ramazan.png" alt="">
+       </div>
+    <div class="hot"> <img src="main_pic/camp.png" alt="" >
+      </div>
 
     <div>
-        <h2 style="text-align: center;">Discounts</h2>
+        
+            <h2 id="Discounts" style="text-align: center;margin-top: 2vw;">Discounts</h2>
+        
     </div>
 
     <!-- ------------------------------------discounts----------------------------------------------- -->
     <div class="Discounts">
-        <img src="product-image.jpg" alt="Product Image">
+        <img src="test.PNG" alt="Product Image">
         <h3 class="product-title">Product Name</h3>
         <div class="product-price">
             <span class="original-price">$100</span>
             <span class="discounted-price">$80</span>
             <span class="discount-percentage">20% OFF</span>
+            <button> read more</button>
         </div>
     </div>
     <div class="Discounts">
-        <img src="product-image.jpg" alt="Product Image">
+        <img src="test.PNG" alt="Product Image">
         <h3 class="product-title">Product Name</h3>
         <div class="product-price">
             <span class="original-price">$100</span>
             <span class="discounted-price">$80</span>
             <span class="discount-percentage">20% OFF</span>
+            <button> read more</button>
         </div>
-    </div>
-    <div class="Discounts">
-        <img src="product-image.jpg" alt="Product Image">
+    </div>  <div class="Discounts">
+        <img src="test.PNG" alt="Product Image">
         <h3 class="product-title">Product Name</h3>
         <div class="product-price">
             <span class="original-price">$100</span>
             <span class="discounted-price">$80</span>
             <span class="discount-percentage">20% OFF</span>
+            <button> read more</button>
         </div>
-    </div>
-    <div class="Discounts">
-        <img src="product-image.jpg" alt="Product Image">
+    </div>  <div class="Discounts">
+        <img src="test.PNG" alt="Product Image">
         <h3 class="product-title">Product Name</h3>
         <div class="product-price">
             <span class="original-price">$100</span>
             <span class="discounted-price">$80</span>
             <span class="discount-percentage">20% OFF</span>
+            <button> read more</button>
         </div>
-    </div>
-    <div class="Discounts">
-        <img src="product-image.jpg" alt="Product Image">
+    </div>  <div class="Discounts">
+        <img src="test.PNG" alt="Product Image">
         <h3 class="product-title">Product Name</h3>
         <div class="product-price">
             <span class="original-price">$100</span>
             <span class="discounted-price">$80</span>
             <span class="discount-percentage">20% OFF</span>
+            <button> read more</button>
         </div>
-    </div>
-    <div class="Discounts">
-        <img src="product-image.jpg" alt="Product Image">
+    </div>  <div class="Discounts">
+        <img src="test.PNG" alt="Product Image">
         <h3 class="product-title">Product Name</h3>
         <div class="product-price">
             <span class="original-price">$100</span>
             <span class="discounted-price">$80</span>
             <span class="discount-percentage">20% OFF</span>
+            <button> read more</button>
         </div>
-    </div>
-
-    <div class="Discounts">
-        <img src="product-image.jpg" alt="Product Image">
+    </div>  <div class="Discounts">
+        <img src="test.PNG" alt="Product Image">
         <h3 class="product-title">Product Name</h3>
         <div class="product-price">
             <span class="original-price">$100</span>
             <span class="discounted-price">$80</span>
             <span class="discount-percentage">20% OFF</span>
+            <button> read more</button>
         </div>
-    </div>
-
-    <div class="Discounts">
-        <img src="product-image.jpg" alt="Product Image">
+    </div>  <div class="Discounts">
+        <img src="test.PNG" alt="Product Image">
         <h3 class="product-title">Product Name</h3>
         <div class="product-price">
             <span class="original-price">$100</span>
             <span class="discounted-price">$80</span>
             <span class="discount-percentage">20% OFF</span>
+            <button> read more</button>
         </div>
-    </div>
-    <div class="Discounts">
-        <img src="product-image.jpg" alt="Product Image">
+    </div>  <div class="Discounts">
+        <img src="test.PNG" alt="Product Image">
         <h3 class="product-title">Product Name</h3>
         <div class="product-price">
             <span class="original-price">$100</span>
             <span class="discounted-price">$80</span>
             <span class="discount-percentage">20% OFF</span>
+            <button> read more</button>
         </div>
-    </div>
-
-
-    <div class="Discounts">
-        <img src="product-image.jpg" alt="Product Image">
+    </div>  <div class="Discounts">
+        <img src="test.PNG" alt="Product Image">
         <h3 class="product-title">Product Name</h3>
         <div class="product-price">
             <span class="original-price">$100</span>
             <span class="discounted-price">$80</span>
             <span class="discount-percentage">20% OFF</span>
+            <button> read more</button>
         </div>
     </div>
 
@@ -800,7 +900,7 @@
                     <div class="brands_pic">
                         <img src="pic_goods/clothing.png" alt="pic">
                     </div>
-                    <input type="submit" value="read more">
+                    <button> read more</button>
                 </fieldset>
             </form>
         </div>
@@ -811,7 +911,7 @@
                     <div class="brands_pic">
                         <img src="pic_goods/clothing.png" alt="pic">
                     </div>
-                    <input type="submit" value="read more">
+                    <button> read more</button>
                 </fieldset>
             </form>
         </div>
@@ -822,7 +922,7 @@
                     <div class="brands_pic">
                         <img src="pic_goods/clothing.png" alt="pic">
                     </div>
-                    <input type="submit" value="read more">
+                    <button> read more</button>
                 </fieldset>
             </form>
         </div>
@@ -833,7 +933,7 @@
                     <div class="brands_pic">
                         <img src="pic_goods/clothing.png" alt="pic">
                     </div>
-                    <input type="submit" value="read more">
+                    <button> read more</button>
                 </fieldset>
             </form>
         </div>
@@ -844,7 +944,7 @@
                     <div class="brands_pic">
                         <img src="pic_goods/clothing.png" alt="pic">
                     </div>
-                    <input type="submit" value="read more">
+                    <button> read more</button>
                 </fieldset>
             </form>
         </div>
@@ -855,7 +955,7 @@
                     <div class="brands_pic">
                         <img src="pic_goods/clothing.png" alt="pic">
                     </div>
-                    <input type="submit" value="read more">
+                    <button> read more</button>
                 </fieldset>
             </form>
         </div>
@@ -866,7 +966,7 @@
                     <div class="brands_pic">
                         <img src="pic_goods/clothing.png" alt="pic">
                     </div>
-                    <input type="submit" value="read more">
+                    <button> read more</button>
                 </fieldset>
             </form>
         </div>
@@ -877,39 +977,38 @@
                     <div class="brands_pic">
                         <img src="pic_goods/clothing.png" alt="pic">
                     </div>
-                    <input type="submit" value="read more">
+                    <button> read more</button>
                 </fieldset>
             </form>
         </div>
-        <!-- -----------------------------------------end page------------------------------------------ -->
+    </div>
+    <!-- -----------------------------------------end page------------------------------------------ -->
 
-        <div class="end" style="text-align: center;padding-top: 2vw;">
-            <form action="submit.php" method="post">
-                <fieldset style="border-radius: 1vw;">
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" required><br><br>
+    <div class="end" style="text-align: center;padding-top: 2vw;">
+        <form action="submit.php" method="post">
+            <fieldset style="border-radius: 1vw;">
+                <!-- <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br><br>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
 
-                    <label for="comment">Comment:</label><br>
-                    <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br><br>
+                <label for="comment">Comment:</label><br>
+                <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br><br>
 
-                    <input type="submit" value="Submit">
+                <input type="submit" value="Submit">
+ -->
 
-
-                    <h2> Stay with us</h2>
-                    <a href="#c2"><img src="app/black-telegram.jpg" alt=""
-                            style="border-radius:2vw;width:5vw;height:5vw;"></a></li>
-                    <a href="#c3"><img src="app/instagram.jpg" alt=""
-                            style="border-radius:2vw;width:5vw;height:5vw;"></a>
-                    </li>
-                    <a href="#c4"><img src="app/whatsapp.png" alt=""
-                            style="border-radius:2vw;width:5vw;height:5vw;"></a>
-                    </li>
-                </fieldset>
-            </form>
-        </div>
+                <h2> Stay with us</h2>
+                <a href="#c2"><img src="app/black-telegram.jpg" alt=""
+                        style="border-radius:2vw;width:5vw;height:5vw;"></a></li>
+                <a href="#c3"><img src="app/instagram.jpg" alt="" style="border-radius:2vw;width:5vw;height:5vw;"></a>
+                </li>
+                <a href="#c4"><img src="app/whatsapp.png" alt="" style="border-radius:2vw;width:5vw;height:5vw;"></a>
+                </li>
+            </fieldset>
+        </form>
+    </div>
 
     </div>
 
