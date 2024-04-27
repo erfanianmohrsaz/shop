@@ -1,0 +1,66 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue; /* Background color */
+
+  }
+  
+  .topnav {
+    background-color: brown; /* Topnav background color */
+    color: blue; /* Topnav text color */
+    padding: 15px 0;
+    text-align: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    float: left;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    background-color: #f0f0f0; /* Sidebar background color */
+    padding: 20px;
+    width: 20%; /* Set sidebar width to 20% */
+
+    float: left; /* Position sidebar on the left */
+
+  }
+  
+  li {
+    margin-bottom: 10px; /* Increase spacing between sidebar options */
+    padding: 10px; /* Add padding to each sidebar option */
+    border-bottom: 1px solid #ddd; /* Add a subtle border below each option */
+  }
+  
+  a {
+    color: black;
+    text-decoration: none;
+    padding: 1px 25px 15px;
+    display: block; /* Make links span the full width of the option */
+    width: 80%;
+    text-align: left; /* Align link text to the left */
+  }
+  
+  a:hover {
+    background-color: gainsboro;
+  }
+  
+  main {
+    padding: 30px; /* Main content padding */
+    margin-left: 22%; /* Adjust margin to accommodate sidebar width */
+
+  }
+  
+  /* Custom styles */
+  /* Add your custom styles here */
+  
