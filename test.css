@@ -1,0 +1,647 @@
+@font-face {
+  font-family: FontName;
+  src: url('FontName.eot');
+  src: url('FontName.eot?#iefix') format('FontName-opentype'),
+       url('FontName.woff') format('woff'),
+       url('FontName.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+h1,h2,h3,h4,h5,p{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+  
+  
+  /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Courier, monospace, sans-serif; */
+}
+
+
+
+
+
+body{
+  background-color:#f8f8f8;
+}
+
+/* ---------------------------------------select_color---------------------------------------- */
+.option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.color-option {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent; /* Add transparent border for all options */
+}
+
+.color-option[data-color="blue"] {
+  background-color: blue;
+}
+
+.color-option[data-color="gray"] {
+  background-color: gray;
+}
+
+.color-option[data-color="red"] {
+  background-color: red;
+}
+
+.option .selected {
+  border: 2px solid black; /* Add black border to selected option */
+}
+
+
+
+
+/* ----------------------------div_for_like-------------------------------------- */
+
+
+
+.text-div_3 {
+  flex: grow 0;
+  
+  width: 40px;
+ 
+  background-color: white;
+
+  border: 1px solid white;
+  border-radius: 5px;
+  height: 50px;
+
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+  width: 95%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  float: right;
+  margin-top: 50px;
+  
+}
+
+
+.image-div {
+  flex: 0 0 33%;
+  margin-bottom: 20px;
+  /* border: 1px solid #ddd;
+  border-radius: 5px; */
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.image-div img {
+  width: 90%;
+  height: 400px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.text-div_1,
+.text-div_2 {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  margin-right: 10px;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    /* width: 100%;
+        margin-left: 20px;
+        margin-right: 20px; */
+  }
+
+  .image-div {
+    order: 0;
+
+  }
+
+  .text-div {
+    width: 100%;
+
+  }
+}
+
+
+
+/* -------------------------------------مشخصات اصلی------------------------------ */
+
+
+
+
+.product-container {
+  display: flex;
+  /* Activate Flexbox for the container */
+  flex-direction: column;
+  /* Arrange items vertically */
+  margin-bottom: 10px;
+  /* Add spacing between containers */
+}
+
+.product-details {
+  display: flex;
+  /* Activate Flexbox for the product details */
+  flex-wrap: wrap;
+  /* Wrap items to the next line if they don't fit */
+  margin-bottom: 10px;
+  /* Add spacing between product details sections */
+}
+
+.product-info {
+  flex: 1 0 auto;
+  /* Distribute available space equally */
+  margin: 5px;
+  /* Add spacing between product info items */
+  /*  padding: 5px;  Add padding to each product info item */
+  border: 1px solid #ccc;
+  /* Add a border to each item */
+  border-radius: 5px;
+  /* Make corners slightly rounded */
+  text-align: center;
+  /* Center text within each item */
+  background-color:#d0d0d0;
+}
+
+.product-param {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-value {
+  margin-bottom: 0;
+}
+
+.product-container:nth-child(1) .product-info:nth-child(1) {
+  background-color: #f0f0f0;
+  /* Background color for the first item of the first container */
+}
+
+.product-container:nth-child(1) .product-info:nth-child(2) {
+  background-color: #e0e0e0;
+  /* Background color for the second item of the first container */
+}
+
+.product-container:nth-child(1) .product-info:nth-child(3) {
+  background-color: #d0d0d0;
+  /* Background color for the third item of the first container */
+}
+
+.product-container:nth-child(2) .product-info:nth-child(1) {
+  background-color: #f8f8f8;
+  /* Background color for the first item of the second container */
+}
+
+.product-container:nth-child(2) .product-info:nth-child(2) {
+  background-color: #e8e8e8;
+  /* Background color for the second item of the second container */
+}
+
+.product-container:nth-child(2) .product-info:nth-child(3) {
+  background-color: #d8d8d8;
+  /* Background color for the third item of the second container */
+}
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------for_blue_button----------------------------- */
+
+
+
+
+
+
+.button-container {
+  width: 170px;
+
+  padding: 10px;
+
+}
+
+.a-custom-button {
+  text-decoration: none;
+}
+
+.custom-button {
+  margin-left: 100px;
+  border-radius: 7px;
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  width: 100%;
+
+  height: 40px;
+
+  padding: 10px 20px;
+
+  border: none;
+
+  background-color: #007bff;
+
+  color: #fff;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+
+}
+
+.custom-button:hover {
+  background-color: #0056b3;
+
+}
+
+.custom-button::before,
+.custom-button::after {
+  content: '';
+
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  height: 100%;
+
+  width: 2px;
+
+  background-color: #ccc;
+
+}
+
+.custom-button::before {
+  left: 0;
+  
+}
+
+.custom-button::after {
+  right: 0;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------like_button------------------------------------- */
+
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+}
+
+.like-button {
+  cursor: pointer;
+}
+
+.heart {
+  font-size: 50px;
+  color: black;
+}
+
+.liked {
+  color: red;
+}
+
+
+/* ----------------------------------share_button------------------------------------- */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  margin: 0;
+}
+
+.share-button {
+  cursor: pointer;
+  background-color:black;
+  color: white;
+  padding: 20px 20px;
+  border-radius: 35px;
+}
+
+.fa-share-alt {
+  font-size: 18px;
+}
+/* ----------------------------------zangole_button------------------------------------- */
+.bell {
+  display: flex;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.bell img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------button_add_in_basket------------------------------------- */
+
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.my-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color:#007bff;
+
+  color: #fff;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  width: 250px;
+  margin-left: 70px;
+}
+
+.my-button:hover {
+  background-color:#0056b3;
+
+}
+
+/* 
+
+
+/* -----------------------------------so_qustion------------------------------------------- */
+
+.faq {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 800px;
+  margin-right: 700px;
+}
+
+details {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+p {
+  margin-top: 0;
+}
+
+/* --------------------------------------comment----------------------------------------- */
+.نظر-فرم {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 800px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+#نظر-ارسال {
+  margin-bottom: 20px;
+}
+
+#نظر-ارسال label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#نظر-ارسال input,
+#نظر-ارسال textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#نظر-ارسال button {
+  padding: 10px 20px;
+  background-color:#007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#نظرات-container {
+  margin-top: 20px;
+}
+
+.نظر {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.نظر-نام {
+  font-weight: bold;
+}
+
+.نظر-متن {
+  margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General styles */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.product-section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.product-details, .description-reviews, .faq, .comment-form {
+  margin-bottom: 20px;
+}
+
+h1, h2 {
+  margin-bottom: 10px;
+}
+
+hr {
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+/* Icons container */
+.icons-container {
+  display: flex;
+  align-items: center;
+}
+
+.like-btn, .notification-btn, .share-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.tooltip {
+  position: absolute;
+  display: none;
+  background-color: #ddd;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Responsive styles for mobile and tablet devices (up to 768px) */
+@media (max-width: 768px) {
+  /* Stack icons container vertically */
+  .icons-container {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .like-btn, .notification-btn, .share-btn {
+    margin-bottom: 10px;
+  }
+
+  /* Adjust product details layout */
+  .product-details {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* Responsive styles for specific elements */
+  .faq, .نظر-فرم { /* Adjust margins for FAQ and comment form */
+    margin: 0 auto;
+    width: 100%; /* Make full width on small screens */
+    max-width: unset; /* Remove unnecessary max-width */
+  }
+
+  .my-button { /* Adjust button styles (if present) */
+    width: 100%; /* Make full width */
+    margin: 10px auto; /* Center horizontally */
+  }
+}
+
+/* Additional responsive styles you might consider (optional) */
+@media (max-width: 480px) {
+  /* Adjust font sizes, paddings, margins for even smaller screens */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
