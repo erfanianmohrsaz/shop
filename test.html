@@ -524,42 +524,61 @@
 
 
 
-        <script>
-          const نظرForm = document.getElementById('نظر-ارسال');
-          const نظراتContainer = document.getElementById('نظرات-container');
+       
+<section id="comments">
 
-          نظرForm.addEventListener('submit', function (e) {
-            e.preventDefault();
+  <div class="comment-form">
+    <h2>Submit New Comment</h2>
+    <form id="comment-submit">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
 
-            const نام = document.getElementById('نام').value;
-            const نظرمتن = document.getElementById('نظر').value;
+      <label for="comment">Comment:</label>
+      <textarea id="comment" name="comment" required></textarea>
 
-            // Add comment to the UI
-            const newComment = document.createElement('div');
-            newComment.classList.add('نظر');
-            newComment.innerHTML = `
-  <div class="نظر-نام">${نام}</div>
-  <div class="نظر-متن">${نظرمتن}</div>
+      <button type="submit">Submit Comment</button>
+    </form>
+
+    <h2>Comments</h2>
+    <div id="comments-container"></div>
+  </div>
+
+  <script src="script.js"></script>
+
+
+
+
+
+  <script>
+
+const commentForm = document.getElementById('comment-submit');
+const commentsContainer = document.getElementById('comments-container');
+
+commentForm.addEventListener('submit', function (e) {
+e.preventDefault();
+
+const name = document.getElementById('name').value;
+const commentText = document.getElementById('comment').value;
+
+// Add comment to the UI
+const newComment = document.createElement('div');
+newComment.classList.add('comment');
+newComment.innerHTML = `
+  <div class="comment-name">${name}</div>
+  <div class="comment-text">${commentText}</div>
 `;
-            نظراتContainer.appendChild(newComment);
+commentsContainer.appendChild(newComment);
 
-            // Clear the form
-            نظرForm.reset();
+// Clear the form
+commentForm.reset();
 
-            // (Optional) Save the comment to a database or file
-          });
+// (Optional) Save the comment to a database or file
+});
 
-
-        </script>
-      </section>
+  </script>
 
 
-
-
-
-
-
-      <script src="script.js"></script>
+</section>
 </body>
 
 </html>

@@ -460,7 +460,7 @@ p {
 }
 
 /* --------------------------------------comment----------------------------------------- */
-.نظر-فرم {
+.comment-form {
   margin: 0 auto;
   width: 80%;
   max-width: 800px;
@@ -470,24 +470,24 @@ h1, h2 {
   text-align: center;
 }
 
-#نظر-ارسال {
+#comment-submit {
   margin-bottom: 20px;
 }
 
-#نظر-ارسال label {
+#comment-submit label {
   display: block;
   margin-bottom: 5px;
 }
 
-#نظر-ارسال input,
-#نظر-ارسال textarea {
+#comment-submit input,
+#comment-submit textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-#نظر-ارسال button {
+#comment-submit button {
   padding: 10px 20px;
   background-color:#007bff;
   color: white;
@@ -496,21 +496,21 @@ h1, h2 {
   cursor: pointer;
 }
 
-#نظرات-container {
+#comments-container {
   margin-top: 20px;
 }
 
-.نظر {
+.comment {
   border: 1px solid #ccc;
   padding: 10px;
   margin-bottom: 10px;
 }
 
-.نظر-نام {
+.comment-name {
   font-weight: bold;
 }
 
-.نظر-متن {
+.comment-text {
   margin-top: 5px;
 }
 
