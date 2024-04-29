@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="test.css">
+
+
+
+  <!-- <nav class="fixed-nav">
+    <ul>
+      <li><a href="#reviews">بررسی</a></li>
+      <li><a href="#specs">مشخصات فنی</a></li>
+      <li><a href="#comments">نظرات</a></li>
+      <li><a href="#questions">سوالات</a></li>
+    </ul>
+  </nav> -->
+
+</head>
+
+<body>
+
+
+  <div class="container">
+
+
+    <!-- ---------------------------------------pic_for_product-------------------------------------------- -->
+
+
+
+
+
+
+
+    <div class="image-div">
+      <img src="download (1).jpg" alt="">
+    </div>
+
+
+
+
+
+
+
+
+    <!-- -----------------------------------main_title|_for_product-------------------------------------- -->
+
+
+
+
+
+
+
+
+
+    <div class="text-div_1">
+      <div class="title">
+        <h3 class="main_name">گوشی سامسونگ با رم 8 و حافظه 256</h3>
+      </div>
+
+
+      <div class="main_txt1">
+        <h5 class="main_txt_t">Samsung Galaxy S23 FE Dual SIM 256GB And 8GB RAM Mobile Phone - Vietnam</h5>
+  
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- ------------------------------------main_Specifications----------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="product-container">
+        <div class="product-details">
+          <div class="product-info">
+            <h4 class="product-param">صفحه نمایش: <p></p>dynamic amoled</h4>
+          </div>
+          <div class="product-info">
+            <h4 class="product-param">رم: <p></p>8GB</h4>
+          </div>
+          <div class="product-info">
+            <h4 class="product-param">حافظه: <p></p>256GB</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-container">
+        <div class="product-details">
+          <div class="product-info">
+            <h4 class="product-param">دوربین اصلی: <p></p>50px</h4>
+          </div>
+          <div class="product-info">
+            <h4 class="product-param">سیستم عامل: <p></p>android 13</h4>
+          </div>
+          <div class="product-info">
+            <h4 class="product-param">اقلام همراه: <p></p>دفترچه</h4>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- ----------------------------select_color----------------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+    
+  <div class="option">
+    <h3>انتخاب رنگ</h3>
+    <div class="color-option" data-color="blue"></div>
+    <div class="color-option" data-color="gray"></div>
+    <div class="color-option" data-color="red"></div>
+  </div>
+
+      <div class="button-container">
+        <a href="#specs" class="a-custom-button"> <button class="custom-button">مشاهده همه ویژگی ها</button></a>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ----------------------------script_color----------------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+      const colorOptions = document.querySelectorAll('.color-option');
+
+      colorOptions.forEach(color => {
+        color.addEventListener('click', function () {
+          const selected = document.querySelector('.option .selected');
+          if (selected) {
+            selected.classList.remove('selected');
+          }
+          this.classList.add('selected');
+        });
+      });
+
+
+
+    </script> 
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- --------------------------------------------------div_3------------------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="text-div_2">
+      <h2 class="seler">فروشنده : اقای فلانی</h2>
+      <p class="rezayat">درصدر رضایت مشتریان از ایشان:%99</p>
+
+      <hr>
+      <h3 class="price"> تومان 25,000,000</h3>
+      <h5 class="found">موجودی در انبار: فقط 2 عدد در انبار موجود است</h5>
+      <div class="button">
+        <button class="my-button">add to basket </button>
+        <hr>
+
+
+      </div>
+      
+      <div class="like">
+
+        <div class="my-container">
+
+
+          <div class="like-button" id="likeButton">
+            <span class="heart" id="heart">&#10084;</span>
+          </div>
+
+          <div class="share-button" id="shareButton">
+            <i class="fas fa-share-alt"></i>
+          </div>
+
+          <div class="bell" id="bell">
+            <img src="download.png" alt="">
+          </div>
+
+
+
+
+
+
+          <!-- ------------------------------------------script_like------------------------------------- -->
+
+
+
+
+          <script>
+            const likeButton = document.getElementById('likeButton');
+            const heart = document.getElementById('heart');
+
+            likeButton.addEventListener('click', function () {
+              heart.classList.toggle('liked');
+            });
+          </script>
+
+          <!-- ------------------------------------------script_zangole------------------------------------- -->
+          <script>
+
+
+            const bell = document.getElementById('bell');
+            const tooltip = document.getElementById('tooltip');
+
+            bell.addEventListener('mouseover', () => {
+              tooltip.style.display = 'block';
+            });
+
+            bell.addEventListener('mouseout', () => {
+              tooltip.style.display = 'none';
+            });
+
+            bell.addEventListener('click', () => {
+              alert(' هر وقت این کالا موجود شد بهت خبر');
+            });
+
+          </script>
+
+          <!-- ------------------------------------------script_share------------------------------------- -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+          <script>
+            const shareButton = document.getElementById('shareButton');
+            const shareIcon = document.getElementById('shareIcon');
+
+            shareButton.addEventListener('click', function () {
+              const url = window.location.href;
+              navigator.clipboard.writeText(url)
+                .then(() => {
+                  alert('Link copied to clipboard: ' + url);
+                })
+                .catch(err => {
+                  console.error('Failed to copy: ', err);
+                });
+            });
+          </script>
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- -------------------------------------------------baresi------------------------------------ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <section id="reviews">
+        <h2>بررسی</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus modi optio officiis eius praesentium,
+          doloremque rerum?
+          Porro sit doloribus ad officiis minus, quod sed sunt non, voluptas labore quos amet molestias cum debitis
+          omnis
+          eaque facilis
+          incidunt laudantium, veritatis fuga quam id laborum saepe iusto. Animi porro reprehenderit numquam placeat
+          neque
+          aliquam sint,
+          repellat est nemo reiciendis corporis omnis consequuntur. Commodi eius libero debitis, nihil, dolores at nam
+          vel
+          fugit quae
+          suscipit deleniti, optio accusantium distinctio numquam nesciunt laudantium magni natus minus
+          ipsam eos. Debitis tempora quos fugit, sequi, cumque accusamus optio numquam alias nobis adipisci ad. Autem,
+          fugit iste.</p>
+      </section>
+
+
+
+
+      <hr>
+
+
+
+
+
+
+      <!-- -------------------------------------------------مشخصات فنی------------------------------------ -->
+
+
+
+
+
+
+
+
+
+
+
+
+      <section id="specs">
+        <h2>مشخصات فنی</h2>
+        <ul>
+          <li>ویژگی 1</li>
+          <li>ویژگی 2</li>
+          <li>ویژگی 4</li>
+          <li>ویژگی 5</li>
+          <li>ویژگی 6</li>
+          <li>ویژگی 7</li>
+          <li>ویژگی 8</li>
+          <li>ویژگی 9</li>
+          <li>ویژگی 10</li>
+        </ul>
+      </section>
+      <hr>
+
+
+
+
+
+
+      <!-- ------------------------------------------<h1>سوالات متداول</h1>------------------------------ -->
+
+
+
+
+
+
+
+
+
+
+      <section id="questions">
+        <h1>سوالات متداول</h1>
+
+        <div class="faq">
+          <details>
+            <summary>qustion1</summary>
+            <p>anwser</p>
+          </details>
+
+          <details>
+            <summary>qustion2</summary>
+            <p>anwser</p>
+          </details>
+
+        </div>
+
+
+      </section>
+
+
+
+
+
+
+
+
+      <!-- ------------------------------------------<h1>script_faumes_questions</h1>-------------------- -->
+
+
+
+
+
+
+
+      <hr>
+
+
+
+      <section id="comments">
+
+
+
+        <div class="نظر-فرم">
+          <h2>ثبت نظر جدید</h2>
+          <form id="نظر-ارسال">
+            <label for="نام">نام:</label>
+            <input type="text" id="نام" name="نام" required>
+
+            <label for="نظر">نظر:</label>
+            <textarea id="نظر" name="نظر" required></textarea>
+
+            <button type="submit">ثبت نظر</button>
+          </form>
+
+          <h2>نظرات</h2>
+          <div id="نظرات-container"></div>
+        </div>
+
+        <script src="script.js"></script>
+
+
+
+
+        <!-- 
+----------------------------------------------script_comment-------------------------------- -->
+
+
+
+
+        <script>
+          const نظرForm = document.getElementById('نظر-ارسال');
+          const نظراتContainer = document.getElementById('نظرات-container');
+
+          نظرForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const نام = document.getElementById('نام').value;
+            const نظرمتن = document.getElementById('نظر').value;
+
+            // Add comment to the UI
+            const newComment = document.createElement('div');
+            newComment.classList.add('نظر');
+            newComment.innerHTML = `
+  <div class="نظر-نام">${نام}</div>
+  <div class="نظر-متن">${نظرمتن}</div>
+`;
+            نظراتContainer.appendChild(newComment);
+
+            // Clear the form
+            نظرForm.reset();
+
+            // (Optional) Save the comment to a database or file
+          });
+
+
+        </script>
+      </section>
+
+
+
+
+
+
+
+      <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
