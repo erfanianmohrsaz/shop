@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voting and Comment System</title>
+<link rel="stylesheet" href="hndex.css">
+</head>
+<body>
+
+<div id="voting-system" class="container">
+    <div class="vote-container">
+        <div class="vote-circle" data-vote="1"></div>
+        <div class="vote-circle" data-vote="2"></div>
+        <div class="vote-circle" data-vote="3"></div>
+        <div class="vote-circle" data-vote="4"></div>
+        <div class="vote-circle" data-vote="5"></div>
+    </div>
+    <div id="selected-vote"></div>
+    <input type="text" id="comment-input" placeholder="Enter your comment">
+    <button id="submit-btn">Submit Comment</button>
+    <div id="comments-section"></div>
+</div>
+
+<script src="script.js"></script>
+
+
+
+
+
+
+
+<script>
+    const voteCircles = document.querySelectorAll('.vote-circle');
+const selectedVote = document.getElementById('selected-vote');
+const commentInput = document.getElementById('comment-input');
+const submitBtn = document.getElementById('submit-btn');
+const commentsSection = document.getElementById('comments-section');
+
+voteCircles.forEach(circle => {
+    circle.addEventListener('click', () => {
+        const selected = circle.getAttribute('data-vote');
+        
+        for (let i = 0; i < voteCircles.length; i++) {
+            if (i < selected) {
+                voteCircles[i].style.backgroundColor = 'orange';
+            } else {
+                voteCircles[i].style.backgroundColor = 'lightgray';
+            }
+        }
+        
+        selectedVote.innerText = ` رای شما: ${selected}/5`;
+    });
+});
+
+submitBtn.addEventListener('click', () => {
+    const comment = commentInput.value;
+    const selected = selectedVote.innerText.split(' ')[2];
+    
+    if (comment !== '') {
+        const newComment = document.createElement('div');
+        newComment.classList.add('comment');
+        newComment.innerText = `رای کاربر: ${selected} , نظرکاربر: ${comment}`;
+        
+        commentsSection.appendChild(newComment);
+        
+        commentInput.value = '';
+        selectedVote.innerText = '';
+        voteCircles.forEach(circle => circle.style.backgroundColor = 'lightgray');
+    } else {
+        alert('Please enter a comment.');
+    }
+});
+</script>
+</body>
+</html>
