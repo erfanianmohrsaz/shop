@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.vote-container {
+    display: flex;
+}
+
+.vote-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 5px;
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+#comment-input {
+    margin-top: 10px;
+    padding: 5px;
+    width: 300px;
+}
+
+#submit-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.comment {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
